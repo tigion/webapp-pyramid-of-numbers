@@ -8,20 +8,17 @@
         <title>Pyramid of Numbers</title>
 
         <meta name="robots" content="index, follow" />
-        <meta name="description" content="" />
+        <meta name="description" content="A pyramid of numbers as a web application for practicing arithmetic with plus and minus." />
         <meta name="keywords" content="" />
 
+        <!--
         <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png" />
         <link rel="shortcut icon" href="img/favicon.ico" />
+        -->
 
         <link rel="stylesheet" type="text/css" href="css/reset.css" media="screen" />
         <link rel="stylesheet" type="text/css" href="css/main.css" media="screen" />
-
-        <!--<noscript>
-            <style>
-            </style>
-        </noscript>-->
     </head>
     <body>
         <header>
@@ -39,7 +36,7 @@
                     <label><input type="radio" id="pyramidModeBuildUp" name="pyramidMode" onchange="updatePyramidSettings()" checked> Build Up</label>
                     <label><input type="radio" id="pyramidModeFillUp" name="pyramidMode" onchange="updatePyramidSettings()"> Fill Up</label>
                 </div>
-                <div id="pyramid"></div>
+                <div id="pyramid"><p class="warningMessage">JavaScript must be enabled<br />for the web application</p></div>
             </section>
             <section id="ground">
                 <div class="settings">

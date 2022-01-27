@@ -1,7 +1,7 @@
 html {
     background-color: white;
     /* over scroll (bounce) color fix, only safari :( */
-    background-image: linear-gradient(#EBD8A3, #cbf2fa);
+    background-image: linear-gradient(#ebd8a3, #cbf2fa);
 }
 
 body {
@@ -42,10 +42,10 @@ nav a {
 }
 
 nav a:hover {
-    background-color: #FFF4A7;
+    background-color: #fff4a7;
 }
 nav a:active {
-    background-color: #FFDDA4;
+    background-color: #ffdda4;
 }
 
 nav a + a {
@@ -79,11 +79,11 @@ main {
 #ground {
     flex: 2;
 
-    border-top: 1px solid #e0c579;
+    border-top: 1px solid #ccb881;
     padding: 40px 0 30px;
 
-    background-color: #EBD8A3;
-    background-image: linear-gradient(#ecd28b, #EBD8A3);
+    background-color: #ebd8a3;
+    background-image: linear-gradient(#ecd28b, #ebd8a3);
 }
 
 /* Pyramid */
@@ -136,7 +136,7 @@ main {
 }
 
 #pyramid input.notEmpty {
-    background-color: #FFF4A7;
+    background-color: #fff4a7;
 }
 
 #pyramid input.right {
@@ -148,7 +148,7 @@ main {
 }
 
 #pyramid input.readOnly {
-    background-color: #FFDDA4;
+    background-color: #ffdda4;
 }
 
 /* Settings */
@@ -173,7 +173,7 @@ footer {
     padding: 10px;
 
     color: rgba(0, 0, 0, .4);
-    background-color: #EBD8A3;
+    background-color: #ebd8a3;
 
     font-size: .6em;
     text-align: center;
@@ -181,4 +181,25 @@ footer {
 
 footer a {
     color: inherit;
+}
+
+/* Warning */
+
+.warningMessage {
+    display: inline-flex;
+    align-items: center;
+    margin: 40px 10px;
+    padding: 10px 15px;
+    box-shadow: 0 1px 4px rgba(0,0,0,.5);
+    background-color: #fff;
+    color: #000;
+    text-align: left;
+    font-size: 0.9em;
+    line-height: 1.2em;
+}
+
+.warningMessage::before {
+    content: "⚠️";
+    padding: 5px 10px 5px 0;
+    font-size: 2em;
 }
