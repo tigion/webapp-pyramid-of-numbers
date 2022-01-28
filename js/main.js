@@ -75,5 +75,6 @@ function init() {
 
 /* main */
 
+initLanguage();
 let pyramid = new Pyramid();
 init();

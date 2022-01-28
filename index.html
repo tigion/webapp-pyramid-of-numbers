@@ -24,24 +24,44 @@
         <header>
             <h1>Pyramid of Numbers</h1>
             <nav>
-                <a onclick="pyramid.new()">New</a>
-                <a onclick="pyramid.clear()">Clear</a>
-                <a onclick="pyramid.solve()">Solve</a>
+                <a onclick="pyramid.new()">
+                    <span class="en">New</span>
+                    <span class="de">Neu</span>
+                </a>
+                <a onclick="pyramid.clear()">
+                    <span class="en">Clear</span>
+                    <span class="de">Leeren</span>
+                </a>
+                <a onclick="pyramid.solve()">
+                    <span class="en">Solve</span>
+                    <span class="de">Lösen</span>
+                </a>
             </nav>
         </header>
 
         <main>
             <section id="sky">
                 <div class="settings">
-                    <label><input type="radio" id="pyramidModeBuildUp" name="pyramidMode" onchange="updatePyramidSettings()" checked> Build up</label>
-                    <label><input type="radio" id="pyramidModeFillUp" name="pyramidMode" onchange="updatePyramidSettings()"> Fill up</label>
+                    <label><input type="radio" id="pyramidModeBuildUp" name="pyramidMode" onchange="updatePyramidSettings()" checked>
+                        <span class="en">Build up</span>
+                        <span class="de">Aufbauen</span>
+                    </label>
+                    <label><input type="radio" id="pyramidModeFillUp" name="pyramidMode" onchange="updatePyramidSettings()">
+                        <span class="en">Fill up</span>
+                        <span class="de">Auffüllen</span>
+                    </label>
                 </div>
-                <div id="pyramid"><p class="warningMessage">JavaScript must be enabled<br />for the web application</p></div>
+                <div id="pyramid"><p class="warningMessage">
+                    <span class="en">JavaScript must be enabled<br />for the web application</span>
+                    <span class="de">Für die Webanwendung muss<br />JavaScript aktiviert sein</span>
+                </p></div>
             </section>
             <section id="ground">
                 <div class="settings">
                     <div>
-                        <label>Pyramid height:
+                        <label>
+                            <span class="en">Pyramid height:</span>
+                            <span class="de">Pyramidenhöhe:</span>
                             <select name="pyramidHeight" id="pyramidHeight" onchange="updatePyramidSettings()">
                                 <option value="3">3</option>
                                 <option value="4">4</option>
@@ -59,30 +79,42 @@
                             </select>
                         </label>
 
-                        <label for="minStartNumber">Start numbers from:</label>
-                        <select name="minStartNumber" id="minStartNumber" onchange="updatePyramidSettings()">
-                            <option value="0">0</option>
-                            <option value="1" selected>1</option>
-                        </select>
+                        <label>
+                            <span class="en">Start numbers from:</span>
+                            <span class="de">Startzahlen von:</span>
+                            <select name="minStartNumber" id="minStartNumber" onchange="updatePyramidSettings()">
+                                <option value="0">0</option>
+                                <option value="1" selected>1</option>
+                            </select>
+                        </label>
 
-                        <label for="maxStartNumber">to:</label>
-                        <select name="maxStartNumber" id="maxStartNumber" onchange="updatePyramidSettings()">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="5">5</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option>
-                            <option value="20" selected>20</option>
-                            <option value="50">50</option>
-                            <option value="100">100</option>
-                            <option value="500">500</option>
-                            <option value="1000">1000</option>
-                        </select>
+                        <label for="maxStartNumber">
+                            <span class="en">to:</span>
+                            <span class="de">bis:</span>
+                            <select name="maxStartNumber" id="maxStartNumber" onchange="updatePyramidSettings()">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="5">5</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="20" selected>20</option>
+                                <option value="50">50</option>
+                                <option value="100">100</option>
+                                <option value="500">500</option>
+                                <option value="1000">1000</option>
+                            </select>
+                        </label>
                     </div>
                     <div>
-                        <label><input type="checkbox" id="useNegativNumbers" name="useNegativNumbers" onchange="updatePyramidSettings()"> Numbers can be negativ</label>
-                        <label><input type="checkbox" id="showValidation" name="showValidation" onchange="updatePyramidSettings()" checked> Show errors</label>
+                        <label><input type="checkbox" id="useNegativNumbers" name="useNegativNumbers" onchange="updatePyramidSettings()">
+                            <span class="en">Numbers can be negativ</span>
+                            <span class="de">Zahlen können negativ sein</span>
+                        </label>
+                        <label><input type="checkbox" id="showValidation" name="showValidation" onchange="updatePyramidSettings()" checked>
+                            <span class="en">Show errors</span>
+                            <span class="de">Zeige Fehler</span>
+                        </label>
                     </div>
                 </div>
             </section>
@@ -90,9 +122,12 @@
 
         <footer>
             Pyramid of Numbers on <a href="https://github.com/tigion/webapp-pyramid-of-numbers/">GitHub</a>
+            <span class="space">•</span>
+            <a onclick="setLanguage('en')">English</a> / <a onclick="setLanguage('de')">Deutsch</a>
         </footer>
 
         <script src="js/help.js"></script>
+        <script src="js/language.js"></script>
         <script src="js/Stone.js"></script>
         <script src="js/Pyramid.js"></script>
         <script src="js/main.js"></script>

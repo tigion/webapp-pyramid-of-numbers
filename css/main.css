@@ -181,6 +181,16 @@ footer {
 
 footer a {
     color: inherit;
+    cursor: pointer;
+}
+
+footer a:hover {
+    color: rgba(0, 0, 0, .8);
+}
+
+footer .space {
+    padding: 0 5px;
+    opacity: .5;
 }
 
 /* Warning */
@@ -203,3 +213,8 @@ footer a {
     padding: 5px 10px 5px 0;
     font-size: 2em;
 }
+
+/* language */
+
+.en, .de { display:none; }
+.en:lang(en), .de:lang(de) { display: inline-block; }
