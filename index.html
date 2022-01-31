@@ -3,7 +3,6 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=0.8" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
         <title>Pyramid of Numbers</title>
 
@@ -52,8 +51,8 @@
                     </label>
                 </div>
                 <div id="pyramid"><p class="warningMessage">
-                    <span class="en">JavaScript must be enabled<br />for the web application</span>
-                    <span class="de">Für die Webanwendung muss<br />JavaScript aktiviert sein</span>
+                    <span class="en">JavaScript must be enabled<br />for the web application.</span>
+                    <span class="de">Für die Webanwendung muss<br />JavaScript aktiviert sein.</span>
                 </p></div>
             </section>
             <section id="ground">
@@ -126,6 +125,12 @@
             <a onclick="setLanguage('en')">English</a> / <a onclick="setLanguage('de')">Deutsch</a>
         </footer>
 
+        <script type='text/javascript'>
+            // simple old browser check (only Internet Explorer)
+            if (/msie|trident/g.test(navigator.userAgent.toLowerCase())) {
+                document.getElementById('pyramid').innerHTML = '<p class="warningMessage">Only modern browsers like Chrome, Edge,<br />Firefox and Safari are supported.</p><br />' + document.getElementById('pyramid').innerHTML;
+            }
+        </script>
         <script src="js/help.js"></script>
         <script src="js/language.js"></script>
         <script src="js/Stone.js"></script>
